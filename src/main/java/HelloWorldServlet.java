@@ -19,13 +19,13 @@ public class HelloWorldServlet extends HttpServlet {
         PrintWriter out = res.getWriter();
         String name = req.getParameter("name");
         boolean reset = Boolean.parseBoolean(req.getParameter("reset"));
-        pageViews++;
         if (name == null) {
             name = "World";
         }
         if (reset) {
             init();
         }
+        pageViews++;
         res.setContentType("text/html");
         out.printf("<h1>Hello, %s!</h1>", name);
         out.printf("<p>Page Views: %d", pageViews);
