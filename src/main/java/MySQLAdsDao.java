@@ -44,4 +44,5 @@ public class MySQLAdsDao implements Ads {
         }
         return ad.getId();
     }
+//    test
 }
